@@ -1,5 +1,4 @@
 import sys
-graph_folder="./"
 if sys.version_info.major < 3 or sys.version_info.minor < 4:
     print("Please using python3.4 or greater!")
     exit(1)
@@ -9,6 +8,7 @@ import argparse
 import cv2
 import pyrealsense2 as rs
 
+sys.path.append('..')
 inWidth = 300
 inHeight = 300
 WHRatio = inWidth / float(inHeight)
@@ -25,8 +25,15 @@ config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
 pipeline.start(config)
 
 try:
-    net = cv2.dnn.readNetFromTensorflow('/home/pi/MobileNet-SSD-RealSense-TF/ssd_mobilenet_v1_coco.pb',
-                                        '/home/pi/MobileNet-SSD-RealSense-TF/ssd_mobilenet_v1_coco.pbtxt')
+#    net = cv2.dnn.readNetFromTensorflow('/home/b920405/git/MobileNet-SSD-RealSense-TF/frozen_inference_graph.pb',
+#                                        '/home/b920405/git/MobileNet-SSD-RealSense-TF/graph.pbtxt')
+
+    MODEL_NAME = 'ssdlite_mobilenet_v2_coco_2018_05_09'
+    CWD_PATH = os.getcwd()
+    PATH_TO_CKPT = os.path.join(CWD_PATH,MODEL_NAME,'frozen_inference_graph.pb')
+    PATH_TO_LABELS = os.path.join(CWD_PATH,'data','mscoco_label_map.pbtxt')
+
+    net = cv2.dnn.readNetFromTensorflow('ssdlite_mobilenet_v2_coco.pb')
     swapRB = True
     classNames = { 0: 'background',
         1: 'person', 2: 'bicycle', 3: 'car', 4: 'motorcycle', 5: 'airplane', 6: 'bus',
