@@ -7,6 +7,7 @@ if sys.version_info.major < 3 or sys.version_info.minor < 4:
 import numpy as np
 import argparse
 import cv2
+import pyrealsense2 as rs
 
 inWidth = 300
 inHeight = 300
