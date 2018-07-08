@@ -26,7 +26,7 @@ pipeline.start(config)
 
 try:
     net = cv2.dnn.readNetFromTensorflow('/home/pi/MobileNet-SSD-RealSense-TF/ssd_mobilenet_v2_coco.pb',
-                                        '/home/pi/MobileNet-SSD-RealSense-TF/ssd_mobilenet_v2_coco.pbtxt')
+                                        '/home/pi/MobileNet-SSD-RealSense-TF/ssd_mobilenet_v2_coco.config')
     swapRB = True
     classNames = { 0: 'background',
         1: 'person', 2: 'bicycle', 3: 'car', 4: 'motorcycle', 5: 'airplane', 6: 'bus',
