@@ -187,3 +187,8 @@ CONF_SWAPSIZE=100
 
 $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
+
+```
+$ cd ~/tensorflow/models/research/object_detection/utils
+$ cp visualization_utils.py BK_visualization_utils.py
+```
