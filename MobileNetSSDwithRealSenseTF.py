@@ -11,7 +11,7 @@ import pyrealsense2 as rs
 import tensorflow as tf
 sys.path.append('..')
 from utils import label_map_util
-from utils import visualization_utils as vis_util
+import visualization_utils as vis_util
 
 
 inWidth = 300
@@ -102,62 +102,10 @@ try:
             category_index,
             use_normalized_coordinates=True,
             line_thickness=2,
-            min_score_thresh=0.55)
-
-        #https://github.com/tensorflow/models/blob/master/research/object_detection/utils/visualization_utils.py
-
-        #meters = depth_frame.as_depth_frame().get_distance(x1+int((x2-x1)/2), y1+int((y2-y1)/2))
-        #label_text = LABELS[int(class_id)] + " (" + str(percentage) + "%)"+ " {:.2f}".format(meters) + " meters away"
-        #cv2.putText(color_image, label_text, (label_left, label_bottom), cv2.FONT_HERSHEY_SIMPLEX, 0.5, label_text_color, 1)
-
-
-
-
-
-#        if num_valid_boxes > 0:
-#
-#            for box_index in range(num_valid_boxes):
-#                
-#                if (not np.isfinite(detections[0, 0, i, 0]) or
-#                    not np.isfinite(detections[0, 0, i, 1]) or
-#                    not np.isfinite(detections[0, 0, i, 2]) or
-#                    not np.isfinite(detections[0, 0, i, 3]) or
-#                    not np.isfinite(detections[0, 0, i, 4]) or
-#                    not np.isfinite(detections[0, 0, i, 5]) or
-#                    not np.isfinite(detections[0, 0, i, 6])):
-#                    continue
-#
-#                x1 = max(0, int(detections[0, 0, i, 3] * height))
-#                y1 = max(0, int(detections[0, 0, i, 6] * width))
-#                x2 = min(height, int(detections[0, 0, i, 5] * height))
-#                y2 = min(width, int(detections[0, 0, i, 4] * width))
-#
-#                min_score_percent = 60
-#                class_id = int(detections[0, 0, i, 1])
-#                percentage = int(detections[0, 0, i, 2] * 100)
-#                if (percentage <= min_score_percent):
-#                    continue
-#
-#                meters = depth_frame.as_depth_frame().get_distance(x1+int((x2-x1)/2), y1+int((y2-y1)/2))
-#                #print(meters)
-#                label_text = LABELS[int(class_id)] + " (" + str(percentage) + "%)"+ " {:.2f}".format(meters) + " meters away"
-#
-#                box_color = (255, 128, 0)
-#                box_thickness = 1
-#                cv2.rectangle(color_image, (x1, y1), (x2, y2), box_color, box_thickness)
-#
-#                label_background_color = (125, 175, 75)
-#                label_text_color = (255, 255, 255)
-#
-#                label_size = cv2.getTextSize(label_text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)[0]
-#                label_left = x1
-#                label_top = y1 - label_size[1]
-#                if (label_top < 1):
-#                    label_top = 1
-#                label_right = label_left + label_size[0]
-#                label_bottom = label_top + label_size[1]
-#                cv2.rectangle(color_image, (label_left - 1, label_top - 1), (label_right + 1, label_bottom + 1), label_background_color, -1)
-#                cv2.putText(color_image, label_text, (label_left, label_bottom), cv2.FONT_HERSHEY_SIMPLEX, 0.5, label_text_color, 1)
+            min_score_thresh=0.55,
+            depth_frame=depth_frame,
+            height=height,
+            width=width)
 
         cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
         cv2.imshow('RealSense', cv2.resize(color_image,(width, height)))
