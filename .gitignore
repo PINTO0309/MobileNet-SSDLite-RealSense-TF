@@ -2,6 +2,7 @@
 /ssd_mobilenet_v1_coco_2018_01_28/
 /ssd_mobilenet_v2_coco_2018_03_29/
 /ssdlite_mobilenet_v2_coco_2018_05_09/
+/__pycache__/
 command.txt
 cv2.so
 
