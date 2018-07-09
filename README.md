@@ -3,6 +3,19 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow) + RealSense D435 
 
 **★★★Production in progress★★★**
 
+## Environment
+- RaspberryPi3 + Raspbian Stretch
+- OpenCV 3.4.1
+- TBB(Intel Threading Building Blocks)
+- Tensorflow 1.8.0
+- Protobuf 3.5.1
+- cmake 3.11.4
+- MobileNet-SSDLite
+- RealSense D435
+- Python3.5
+
+## Environment construction sequence
+
 ```
 $ sudo nano /etc/dphys-swapfile
 CONF_SWAPSIZE=2048
