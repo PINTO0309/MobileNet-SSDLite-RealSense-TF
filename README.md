@@ -189,5 +189,8 @@ $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
 
 ```
-$ git clone 
+$ cd ~
+$ git clone https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF.git
+$ cd MobileNet-SSDLite-RealSense-TF
+$ python3 MobileNetSSDwithRealSenseTF.py
 ```
