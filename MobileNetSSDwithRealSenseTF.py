@@ -102,7 +102,7 @@ try:
             category_index,
             use_normalized_coordinates=True,
             line_thickness=1,
-            min_score_thresh=0.85)
+            min_score_thresh=0.55)
 
         #https://github.com/tensorflow/models/blob/master/research/object_detection/utils/visualization_utils.py
 
