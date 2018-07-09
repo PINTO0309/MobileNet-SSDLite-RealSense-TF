@@ -189,6 +189,8 @@ $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
 
 ```
-$ cd ~/tensorflow/models/research/object_detection/utils
-$ cp visualization_utils.py BK_visualization_utils.py
+$ cd ~
+$ git clone https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF.git
+$ cd MobileNet-SSDLite-RealSense-TF
+$ python3 MobileNetSSDwithRealSenseTF.py
 ```
