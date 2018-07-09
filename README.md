@@ -167,3 +167,10 @@ $ wget http://download.tensorflow.org/models/object_detection/ssdlite_mobilenet_
 $ tar -xzvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
 $ rm ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
 ```
+
+```
+$ sudo nano /etc/dphys-swapfile
+CONF_SWAPSIZE=100
+
+$ sudo /etc/init.d/dphys-swapfile restart swapon -s
+```
