@@ -157,7 +157,7 @@ $ sudo reboot
 $ mkdir tensorflow;cd tensorflow
 $ git clone --recurse-submodules https://github.com/tensorflow/models.git
 $ nano ~/.bashrc
-$ export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/slim
+$ export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/object_detection
 ```
 ```
 $ cd ~/tensorflow/models/research
