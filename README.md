@@ -1,5 +1,5 @@
 # MobileNet-SSD-RealSense-TF
-RaspberryPi3 + MobileNet-SSD + RealSense D435 + with Tensorflow + without Neural Compute Stick(NCS)
+RaspberryPi3(Raspbian Stretch) + MobileNet-SSD + RealSense D435 + Tensorflow + without Neural Compute Stick(NCS)
 
 **★★★Production in progress★★★**
 
