@@ -18,7 +18,7 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow) + RealSense D435 
 
 ![Ubuntu1604](https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF/blob/master/media/MobileNet-SSDLite-TF-Ubuntu.gif)
 
-## By RaspberryPi3
+## By RaspberryPi3 without OpenGL
 
 ![RaspberryPi3](https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF/blob/master/media/MobileNet-SSDLite-TF-Raspi.gif)
 
