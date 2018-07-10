@@ -16,7 +16,7 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow) + RealSense D435 
 
 ## Videos under test by Ubuntu 16.04
 
-![Ubuntu1604](https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF/blob/master/media/MobileNet-SSD-TF-Ubuntu.gif)
+![Ubuntu1604](https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF/blob/master/media/MobileNet-SSDLite-TF-Ubuntu.gif)
 
 ## By RaspberryPi3
 
