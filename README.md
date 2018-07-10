@@ -18,7 +18,7 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow) + RealSense D435 
 
 ![Ubuntu1604](https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF/blob/master/media/MobileNet-SSD-TF-Ubuntu.gif)
 
-## Environment construction sequence
+## RaspberryPi environment construction sequence
 
 ```
 $ sudo nano /etc/dphys-swapfile
