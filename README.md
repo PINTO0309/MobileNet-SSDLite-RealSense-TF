@@ -1,8 +1,6 @@
 # MobileNet-SSDLite-RealSense-TF
 RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow) + RealSense D435 + Tensorflow + without Neural Compute Stick(NCS)
 
-**★★★Production in progress★★★**
-
 ## Environment
 - RaspberryPi3 + Raspbian Stretch
 - OpenCV 3.4.1
