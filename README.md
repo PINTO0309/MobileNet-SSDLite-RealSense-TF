@@ -13,6 +13,7 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow) + RealSense D435 
 - MobileNet-SSDLite
 - RealSense D435
 - Python3.5
+- Numpy
 
 ## Videos under test by Ubuntu 16.04
 
