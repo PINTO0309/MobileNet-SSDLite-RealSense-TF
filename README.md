@@ -199,7 +199,12 @@ CONF_SWAPSIZE=100
 
 $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
-14.MobileNet-SSD execution
+14.Enable OpenGL Driver
+```
+$ sudo raspi-config
+「7.Advanced Options」-「A7 GL Driver」-「G2 GL (Fake KMS)」 and Activate Raspberry Pi's OpenGL Driver
+```
+15.MobileNet-SSD execution
 ```
 $ cd ~
 $ git clone https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF.git
