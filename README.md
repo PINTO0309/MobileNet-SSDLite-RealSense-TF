@@ -12,14 +12,15 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow) + RealSense D435 
 - RealSense D435
 - Python3.5
 - Numpy
+- OpenGL
 
 ## Videos under test by Ubuntu 16.04
 
 ![Ubuntu1604](https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF/blob/master/media/MobileNet-SSDLite-TF-Ubuntu.gif)
 
-## By RaspberryPi3 without OpenGL
+## By RaspberryPi3 with OpenGL
 
-![RaspberryPi3](https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF/blob/master/media/MobileNet-SSDLite-TF-Raspi.gif)
+![RaspberryPi3](https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF/blob/master/media/MobileNet-SSDLite-TF-Raspi-OpenGL.gif)
 
 
 ## RaspberryPi environment construction sequence
