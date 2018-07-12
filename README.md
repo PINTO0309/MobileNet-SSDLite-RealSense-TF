@@ -58,7 +58,7 @@ $ wget https://cmake.org/files/v3.11/cmake-3.11.4.tar.gz
 $ tar -zxvf cmake-3.11.4.tar.gz;rm cmake-3.11.4.tar.gz
 $ cd cmake-3.11.4
 $ ./configure --prefix=/home/pi/cmake-3.11.4
-$ make -j1
+$ sudo make -j1
 $ sudo make install
 $ export PATH=/home/pi/cmake-3.11.4/bin:$PATH
 $ source ~/.bashrc
