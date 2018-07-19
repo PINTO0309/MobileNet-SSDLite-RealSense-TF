@@ -1,5 +1,5 @@
 # MobileNet-SSDLite-RealSense-TF
-RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow) + RealSense D435 + Tensorflow + without Neural Compute Stick(NCS)
+RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow/MobileNetSSDLite) + RealSense D435 + Tensorflow + without Neural Compute Stick(NCS)
 
 ## Environment
 - RaspberryPi3 + Raspbian Stretch
