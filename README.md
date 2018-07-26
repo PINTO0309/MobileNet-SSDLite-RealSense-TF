@@ -122,6 +122,7 @@ $ cmake -D CMAKE_CXX_FLAGS="-DTBB_USE_GCC_BUILTINS=1 -D__TBB_64BIT_ATOMICS=0" \
         -D BUILD_TBB=OFF \
         -D WITH_CUDA=OFF \
         -D ENABLE_NEON:BOOL=ON \
+        -D ENABLE_VFPV3=ON \
         -D WITH_QT=OFF \
         -D BUILD_TESTS=OFF ..
 $ make -j1
