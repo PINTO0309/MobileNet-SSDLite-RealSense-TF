@@ -184,7 +184,8 @@ $ sudo reboot
 $ mkdir tensorflow;cd tensorflow
 $ git clone --recurse-submodules https://github.com/tensorflow/models.git
 $ nano ~/.bashrc
-$ export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/object_detection
+export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/object_detection
+
 $ source ~/.bashrc
 $ cd ~/tensorflow/models/research
 $ protoc object_detection/protos/*.proto --python_out=.
