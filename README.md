@@ -31,6 +31,26 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow/MobileNetSSDLite) 
 
 
 ## RaspberryPi environment construction sequence
+0.Realsense D435's Firmware update
+```bash
+$ echo 'deb http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo xenial main' | sudo tee /etc/apt/sources.list.d/realsensepublic.list
+$ sudo apt-key adv --keyserver keys.gnupg.net --recv-key 6F3EFCDE
+$ sudo apt-get update
+$ sudo apt-get install intel-realsense-dfu*
+$ mkdir v5.10.6;cd v5.10.6
+$ wget -O v5.10.6.zip https://downloadmirror.intel.com/28237/eng/Intel%C2%AE%20RealSense%E2%84%A2D400%20Series%20Signed%20Production%20Firmware%20v5_10_6.zip
+$ unzip v5.10.6.zip
+
+$ lsusb
+### Below is sample.
+Bus 002 Device 003: ID 8086:0b07 Intel Corp.
+```
+```bash
+$ intel-realsense-dfu -b 002 -d 003 -f -i ./Signed_Image_UVC_5_10_6_0.bin
+$ intel-realsense-dfu -p
+FW version on device = 5.10.6.0
+MM FW Version = 255.255.255.255
+```
 1.Extend the SWAP area
 ```bash
 $ sudo nano /etc/dphys-swapfile
