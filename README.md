@@ -95,7 +95,7 @@ $ protoc --version
 ```bash
 $ cd git;mkdir protobuf;cd protobuf
 $ wget -O protoc-3.6.1-linux-x86_64.zip https://github.com/protocolbuffers/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-x86_64.zip
-$ unzip protoc-3.6.1-linux-x86_64.zip #-d protoc3
+$ unzip protoc-3.6.1-linux-x86_64.zip
 $ rm protoc-3.6.1-linux-x86_64.zip
 $ sudo mv -f bin/* /usr/local/bin/
 $ sudo mv -bf include/* /usr/local/include/
