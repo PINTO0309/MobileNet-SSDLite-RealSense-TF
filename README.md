@@ -209,6 +209,10 @@ $ cmake .. -DBUILD_EXAMPLES=true
 $ make -j1
 $ sudo make install
 ```
+10.Install Python Wrapper
+```bash
+$ sudo -H pip3 install pyrealsense2
+```
 10.Install OpenCV Wrapper
 ```bash
 $ cd ~/librealsense/wrappers/opencv;mkdir build;cd build
