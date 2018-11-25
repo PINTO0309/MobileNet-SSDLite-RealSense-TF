@@ -16,7 +16,7 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow/MobileNetSSDLite) 
 - librealsense v2.16.5 (Nov 25, 2018 updated)
 - cmake 3.11.4
 - MobileNet-SSDLite
-- RealSense D435
+- RealSense D435 (Firmware ver v5.10.6)
 - Python3.5
 - Numpy
 - OpenGL
