@@ -209,7 +209,7 @@ $ cmake .. -DBUILD_EXAMPLES=true
 $ make -j1
 $ sudo make install
 ```
-10.Install Python Wrapper
+10.【Ubuntu16.04 Only】 Install Python Wrapper
 ```bash
 $ sudo -H pip3 install pyrealsense2
 ```
