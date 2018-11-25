@@ -213,10 +213,12 @@ $ sudo make install
 ```bash
 $ cd ~/librealsense/wrappers/opencv;mkdir build;cd build
 $ nano ../CMakeLists.txt
+add_subdirectory(imshow)
 add_subdirectory(grabcuts)
 add_subdirectory(latency-tool)
 add_subdirectory(dnn)
 ↓
+#add_subdirectory(imshow)
 #add_subdirectory(grabcuts)
 #add_subdirectory(latency-tool)
 #add_subdirectory(dnn)
