@@ -4,6 +4,8 @@ RaspberryPi3(Raspbian Stretch) + MobileNetv2-SSDLite(Tensorflow/MobileNetv2SSDLi
 =========================================
 
 **Nov 25, 2018 Under refactoring**
+**Please refer to here until refactoring is over.**
+**https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF/releases/tag/v2.0**
 
 =========================================
 
