@@ -200,12 +200,27 @@ $ sudo -H pip3 install pyopengl_accelerate
 
 $ sudo reboot
 ```
-12.Introduction of model data of MobileNet-SSDLite
+12-1.Introduction of model data of MobileNet-SSDLite (Raspbian Stretch)
 ```bash
 $ mkdir tensorflow;cd tensorflow
 $ git clone --recurse-submodules https://github.com/tensorflow/models.git
 $ nano ~/.bashrc
 export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/object_detection
+
+$ source ~/.bashrc
+$ cd ~/tensorflow/models/research
+$ protoc object_detection/protos/*.proto --python_out=.
+$ cd ~/tensorflow/models/research/object_detection
+$ wget http://download.tensorflow.org/models/object_detection/ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
+$ tar -xzvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
+$ rm ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
+```
+12-2.Introduction of model data of MobileNet-SSDLite (Ubuntu16.04 x86_64)
+```bash
+$ mkdir tensorflow;cd tensorflow
+$ git clone --recurse-submodules https://github.com/tensorflow/models.git
+$ nano ~/.bashrc
+export PYTHONPATH=$PYTHONPATH:/home/<username>/tensorflow/models/research:/home/<username>/tensorflow/models/research/object_detection
 
 $ source ~/.bashrc
 $ cd ~/tensorflow/models/research
