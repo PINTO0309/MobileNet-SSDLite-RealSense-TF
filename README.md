@@ -31,7 +31,7 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow/MobileNetSSDLite) 
 
 
 ## RaspberryPi environment construction sequence
-0.Realsense D435's Firmware update
+0.【Run in Ubuntu 16.04 environment】Realsense D435's Firmware update
 ```bash
 $ echo 'deb http://realsense-hw-public.s3.amazonaws.com/Debian/apt-repo xenial main' | sudo tee /etc/apt/sources.list.d/realsensepublic.list
 $ sudo apt-key adv --keyserver keys.gnupg.net --recv-key 6F3EFCDE
