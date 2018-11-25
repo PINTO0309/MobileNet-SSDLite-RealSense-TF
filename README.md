@@ -194,8 +194,10 @@ $ sudo make install
 $ cd ~/librealsense/wrappers/opencv;mkdir build;cd build
 $ nano ../CMakeLists.txt
 add_subdirectory(latency-tool)
+add_subdirectory(dnn)
 ↓
 #add_subdirectory(latency-tool)
+#add_subdirectory(dnn)
 
 $ cmake ..
 $ make -j $(($(nproc) + 1))
