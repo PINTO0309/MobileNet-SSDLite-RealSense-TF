@@ -3,7 +3,7 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow/MobileNetSSDLite) 
 
 ## Environment
 - RaspberryPi3 + Raspbian Stretch
-- OpenCV 3.4.1
+- OpenCV 3.4.3 (Nov 25, 2018 updated)
 - VFPV3 or TBB(Intel Threading Building Blocks)
 - Tensorflow 1.11.0 (Nov 25, 2018 updated)
 - Protobuf 3.6.1 (Nov 25, 2018 updated)
@@ -82,14 +82,18 @@ $ source ~/.bashrc
 ```
 6-1.Install protobuf 3.6.1 (Raspbian Stretch)
 ```bash
+$ cd ~
 $ wget https://github.com/google/protobuf/releases/download/v3.6.1/protobuf-all-3.6.1.tar.gz
 $ tar -zxvf protobuf-all-3.6.1.tar.gz
 $ cd protobuf-3.6.1
 $ ./configure
 $ make -j1
 $ sudo make install
+$ nano ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/<username>/protobuf-3.6.1/src/.libs
+
+$ source ~/.bashrc
 $ cd python
-$ export LD_LIBRARY_PATH=../src/.libs
 $ python3 setup.py build --cpp_implementation 
 $ python3 setup.py test --cpp_implementation
 $ sudo python3 setup.py install --cpp_implementation
@@ -112,7 +116,7 @@ $ sudo chown -R $USER /usr/local/include/google
 $ sudo ldconfig
 ```
 
-7.Install TBB(Intel Threading Buiding Blocks)
+7.Install TBB (Raspbian Stretch / Intel Threading Buiding Blocks)
 ```bash
 $ cd ~
 $ wget https://github.com/PINTO0309/TBBonARMv7/raw/master/libtbb-dev_2018U2_armhf.deb
@@ -120,19 +124,19 @@ $ sudo dpkg -i ~/libtbb-dev_2018U2_armhf.deb
 $ sudo ldconfig
 $ rm libtbb-dev_2018U2_armhf.deb
 ```
-8.Install OpenCV 3.4.1(with TBB, with DNN, with OpenGL)
+8-1.Install OpenCV 3.4.3(Raspbian Stretch / with TBB, with DNN, with OpenGL)
 ```bash
 $ cd ~
-$ wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.4.1.zip
+$ wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.4.3.zip
 $ unzip opencv.zip;rm opencv.zip
-$ wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.4.1.zip
+$ wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.4.3.zip
 $ unzip opencv_contrib.zip;rm opencv_contrib.zip
-$ cd ~/opencv-3.4.1/;mkdir build;cd build
+$ cd ~/opencv-3.4.3/;mkdir build;cd build
 $ cmake -D CMAKE_CXX_FLAGS="-DTBB_USE_GCC_BUILTINS=1 -D__TBB_64BIT_ATOMICS=0" \
         -D CMAKE_BUILD_TYPE=RELEASE \
         -D CMAKE_INSTALL_PREFIX=/usr/local \
         -D INSTALL_PYTHON_EXAMPLES=OFF \
-        -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.4.1/modules \
+        -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.4.3/modules \
         -D BUILD_EXAMPLES=OFF \
         -D PYTHON_DEFAULT_EXECUTABLE=$(which python3) \
         -D INSTALL_PYTHON_EXAMPLES=OFF \
@@ -150,6 +154,14 @@ $ cmake -D CMAKE_CXX_FLAGS="-DTBB_USE_GCC_BUILTINS=1 -D__TBB_64BIT_ATOMICS=0" \
 $ make -j1
 $ sudo make install
 $ sudo ldconfig
+```
+8-2.Install OpenCV 3.4.3(Ubuntu16.04 x86_64)
+```bash
+$ sudo -H pip3 install opencv-python==3.4.3.18
+$ nano ~/.bashrc
+export PYTHONPATH=/usr/local/lib/python3.5/dist-packages/cv2:$PYTHONPATH
+
+$ source ~/.bashrc
 ```
 9.Install Intel® RealSense™ SDK 2.0
 ```bash
