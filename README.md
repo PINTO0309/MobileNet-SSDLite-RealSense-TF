@@ -114,6 +114,10 @@ $ sudo mv -bf include/* /usr/local/include/
 $ sudo chown $USER /usr/local/bin/protoc
 $ sudo chown -R $USER /usr/local/include/google
 $ sudo ldconfig
+$ nano ~/.bashrc
+export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION_VERSION=2
+
+$ source ~/.bashrc
 ```
 
 7.Install TBB (Raspbian Stretch / Intel Threading Buiding Blocks)
