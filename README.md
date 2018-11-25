@@ -25,14 +25,14 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow/MobileNetSSDLite) 
 
 ## RaspberryPi environment construction sequence
 1.Extend the SWAP area
-```
+```bash
 $ sudo nano /etc/dphys-swapfile
 CONF_SWAPSIZE=2048
 
 $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
 2.Install tensorflow 1.8.0
-```
+```bash
 $ cd ~
 $ sudo apt update;sudo apt upgrade
 $ wget https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.8.0/tensorflow-1.8.0-cp35-none-linux_armv7l.whl
@@ -40,7 +40,7 @@ $ sudo pip3 install tensorflow-1.8.0-cp35-none-linux_armv7l.whl
 $ rm tensorflow-1.8.0-cp35-none-linux_armv7l.whl
 ```
 3.Install package and update udev rule
-```
+```bash
 $ sudo pip3 install pillow lxml jupyter matplotlib cython
 $ sudo apt install -y git libssl-dev libusb-1.0-0-dev pkg-config libgtk-3-dev \
 libglfw3-dev at-spi2-core libdrm* python-tk libjpeg-dev libtiff5-dev \
@@ -52,7 +52,7 @@ $ sudo wget https://raw.githubusercontent.com/IntelRealSense/librealsense/master
 $ sudo udevadm control --reload-rules && udevadm trigger
 ```
 4.Install cmake-3.11.4
-```
+```bash
 $ cd ~
 $ wget https://cmake.org/files/v3.11/cmake-3.11.4.tar.gz
 $ tar -zxvf cmake-3.11.4.tar.gz;rm cmake-3.11.4.tar.gz
@@ -66,7 +66,7 @@ $ cmake --version
 cmake version 3.11.4
 ```
 5.Update LD_LIBRARY_PATH
-```
+```bash
 $ nano ~/.bashrc
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
@@ -105,7 +105,7 @@ $ sudo ldconfig
 ```
 
 7.Install TBB(Intel Threading Buiding Blocks)
-```
+```bash
 $ cd ~
 $ wget https://github.com/PINTO0309/TBBonARMv7/raw/master/libtbb-dev_2018U2_armhf.deb
 $ sudo dpkg -i ~/libtbb-dev_2018U2_armhf.deb
@@ -113,7 +113,7 @@ $ sudo ldconfig
 $ rm libtbb-dev_2018U2_armhf.deb
 ```
 8.Install OpenCV 3.4.1(with TBB, with DNN, with OpenGL)
-```
+```bash
 $ cd ~
 $ wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.4.1.zip
 $ unzip opencv.zip;rm opencv.zip
@@ -144,7 +144,7 @@ $ sudo make install
 $ sudo ldconfig
 ```
 9.Install Intel® RealSense™ SDK 2.0
-```
+```bash
 $ cd ~
 $ git clone https://github.com/IntelRealSense/librealsense.git
 $ cd ~/librealsense;mkdir build;cd build
@@ -157,7 +157,7 @@ $ make -j1
 $ sudo make install
 ```
 10.Install OpenCV Wrapper
-```
+```bash
 $ cd ~/librealsense/wrappers/opencv;mkdir build;cd build
 $ cmake ..
 $ nano ../latency-tool/CMakeLists.txt
@@ -186,7 +186,7 @@ export PYTHONPATH=$PYTHONPATH:/usr/local/lib
 $ source ~/.bashrc
 ```
 11.Installing the OpenGL package for Python
-```
+```bash
 $ sudo apt-get install python-opengl
 $ sudo -H pip3 install pyopengl
 $ sudo -H pip3 install pyopengl_accelerate
@@ -194,7 +194,7 @@ $ sudo -H pip3 install pyopengl_accelerate
 $ sudo reboot
 ```
 12.Introduction of model data of MobileNet-SSDLite
-```
+```bash
 $ mkdir tensorflow;cd tensorflow
 $ git clone --recurse-submodules https://github.com/tensorflow/models.git
 $ nano ~/.bashrc
@@ -209,19 +209,19 @@ $ tar -xzvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
 $ rm ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
 ```
 13.Reduce the SWAP area to the default size
-```
+```bash
 $ sudo nano /etc/dphys-swapfile
 CONF_SWAPSIZE=100
 
 $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
 14.Enable OpenGL Driver
-```
+```bash
 $ sudo raspi-config
 「7.Advanced Options」-「A7 GL Driver」-「G2 GL (Fake KMS)」 and Activate Raspberry Pi's OpenGL Driver
 ```
 15.MobileNet-SSD execution
-```
+```bash
 $ cd ~
 $ git clone https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF.git
 $ cd MobileNet-SSDLite-RealSense-TF
