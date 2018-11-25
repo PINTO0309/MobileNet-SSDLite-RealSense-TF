@@ -176,8 +176,10 @@ $ source ~/.bashrc
 9.Install Intel® RealSense™ SDK 2.0
 ```bash
 $ cd ~
-$ git clone https://github.com/IntelRealSense/librealsense.git
-$ cd ~/librealsense;mkdir build;cd build
+$ git clone -b v2.16.5 https://github.com/IntelRealSense/librealsense.git
+$ cd ~/librealsense
+$ git checkout -b v2.16.5
+$ mkdir build;cd build
 
 $ cmake .. -DBUILD_EXAMPLES=true -DCMAKE_BUILD_TYPE=Release
 OR
