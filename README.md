@@ -1,5 +1,5 @@
 # MobileNet-SSDLite-RealSense-TF
-RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow/MobileNetSSDLite) + RealSense D435 + Tensorflow + without Neural Compute Stick(NCS)
+RaspberryPi3(Raspbian Stretch) + MobileNetv2-SSDLite(Tensorflow/MobileNetv2SSDLite) + RealSense D435 + Tensorflow + without Neural Compute Stick(NCS)
 
 =========================================
 
@@ -15,7 +15,7 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow/MobileNetSSDLite) 
 - Protobuf 3.6.1 (Nov 25, 2018 updated)
 - librealsense v2.16.5 (Nov 25, 2018 updated)
 - cmake 3.11.4
-- MobileNet-SSDLite
+- MobileNetv2-SSDLite [MSCOCO]
 - RealSense D435 (Firmware ver v5.10.6)
 - Python3.5
 - Numpy
