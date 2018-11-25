@@ -13,6 +13,7 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow/MobileNetSSDLite) 
 - VFPV3 or TBB(Intel Threading Building Blocks)
 - Tensorflow 1.11.0 (Nov 25, 2018 updated)
 - Protobuf 3.6.1 (Nov 25, 2018 updated)
+- librealsense v2.16.5 (Nov 25, 2018 updated)
 - cmake 3.11.4
 - MobileNet-SSDLite
 - RealSense D435
