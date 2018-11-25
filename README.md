@@ -192,13 +192,12 @@ $ sudo make install
 10.Install OpenCV Wrapper
 ```bash
 $ cd ~/librealsense/wrappers/opencv;mkdir build;cd build
-$ cmake ..
-$ nano ../latency-tool/CMakeLists.txt
-
-target_link_libraries(rs-latency-tool ${DEPENDENCIES})
+$ nano ../CMakeLists.txt
+add_subdirectory(latency-tool)
 ↓
-target_link_libraries(rs-latency-tool ${DEPENDENCIES} pthread)
+#add_subdirectory(latency-tool)
 
+$ cmake ..
 $ make -j $(($(nproc) + 1))
 $ sudo make install
 $ cd ~/librealsense/build
