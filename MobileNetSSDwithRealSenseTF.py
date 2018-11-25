@@ -26,10 +26,10 @@ pipeline = None
 
 try:
     HOME_PATH = os.path.expanduser('~')
-    CWD_PATH = 'tensorflow/models/research/object_detection'
-    MODEL_NAME = 'ssdlite_mobilenet_v2_coco_2018_05_09'
-    PATH_TO_CKPT = os.path.join(HOME_PATH, CWD_PATH, MODEL_NAME, 'frozen_inference_graph.pb')
-    PATH_TO_LABELS = os.path.join(HOME_PATH, CWD_PATH, 'data', 'mscoco_label_map.pbtxt')
+    CWD_PATH = 'model'
+    #MODEL_NAME = 'ssdlite_mobilenet_v2_coco_2018_05_09'
+    PATH_TO_CKPT = os.path.join(CWD_PATH, 'frozen_inference_graph.pb')
+    PATH_TO_LABELS = os.path.join(CWD_PATH, 'mscoco_label_map.pbtxt')
     swapRB = True
     NUM_CLASSES = 90
 
