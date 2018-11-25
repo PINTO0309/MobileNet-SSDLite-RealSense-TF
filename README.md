@@ -72,8 +72,8 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 $ source ~/.bashrc
 ```
-6.Install protobuf 3.5.1
-```
+6-1.Install protobuf 3.5.1
+```bash
 $ wget https://github.com/google/protobuf/releases/download/v3.5.1/protobuf-all-3.5.1.tar.gz
 $ tar -zxvf protobuf-all-3.5.1.tar.gz
 $ cd protobuf-3.5.1
@@ -90,6 +90,20 @@ $ export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION_VERSION=3
 $ sudo ldconfig
 $ protoc --version
 ```
+
+6-2.Install protobuf 3.6.1 (Ubuntu16.04 x86_64)
+```bash
+$ cd git;mkdir protobuf;cd protobuf
+$ wget -O protoc-3.6.1-linux-x86_64.zip https://github.com/protocolbuffers/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-x86_64.zip
+$ unzip protoc-3.6.1-linux-x86_64.zip #-d protoc3
+$ rm protoc-3.6.1-linux-x86_64.zip
+$ sudo mv -f bin/* /usr/local/bin/
+$ sudo mv -bf include/* /usr/local/include/
+$ sudo chown $USER /usr/local/bin/protoc
+$ sudo chown -R $USER /usr/local/include/google
+$ sudo ldconfig
+```
+
 7.Install TBB(Intel Threading Buiding Blocks)
 ```
 $ cd ~
