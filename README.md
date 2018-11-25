@@ -5,8 +5,8 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow/MobileNetSSDLite) 
 - RaspberryPi3 + Raspbian Stretch
 - OpenCV 3.4.1
 - VFPV3 or TBB(Intel Threading Building Blocks)
-- Tensorflow 1.11.0
-- Protobuf 3.6.1
+- Tensorflow 1.11.0 (November 25, 2018 updated)
+- Protobuf 3.6.1 (November 25, 2018 updated)
 - cmake 3.11.4
 - MobileNet-SSDLite
 - RealSense D435
