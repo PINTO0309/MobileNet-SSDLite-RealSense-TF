@@ -39,6 +39,7 @@ $ sudo apt-get install -y openmpi-bin libopenmpi-dev
 $ sudo pip3 uninstall tensorflow
 $ wget -O tensorflow-1.11.0-cp35-cp35m-linux_armv7l.whl https://github.com/PINTO0309/Tensorflow-bin/raw/master/tensorflow-1.11.0-cp35-cp35m-linux_armv7l_jemalloc.whl
 $ sudo pip3 install tensorflow-1.11.0-cp35-cp35m-linux_armv7l.whl
+【Required】Restart the terminal
 ```
 2-2.Install tensorflow 1.11.0 (Ubuntu16.04 x86_64)
 ```bash
