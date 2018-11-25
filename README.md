@@ -5,8 +5,8 @@ RaspberryPi3(Raspbian Stretch) + MobileNet-SSDLite(Tensorflow/MobileNetSSDLite) 
 - RaspberryPi3 + Raspbian Stretch
 - OpenCV 3.4.1
 - VFPV3 or TBB(Intel Threading Building Blocks)
-- Tensorflow 1.8.0
-- Protobuf 3.5.1
+- Tensorflow 1.11.0
+- Protobuf 3.6.1
 - cmake 3.11.4
 - MobileNet-SSDLite
 - RealSense D435
@@ -31,14 +31,21 @@ CONF_SWAPSIZE=2048
 
 $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
-2.Install tensorflow 1.8.0
+2-1.Install tensorflow 1.11.0 (Raspbian Stretch)
 ```bash
-$ cd ~
-$ sudo apt update;sudo apt upgrade
-$ wget https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.8.0/tensorflow-1.8.0-cp35-none-linux_armv7l.whl
-$ sudo pip3 install tensorflow-1.8.0-cp35-none-linux_armv7l.whl
-$ rm tensorflow-1.8.0-cp35-none-linux_armv7l.whl
+$ sudo -H pip3 install pip --upgrade
+$ sudo apt-get install python-pip python3-pip python3-scipy libhdf5-dev
+$ sudo apt-get install -y openmpi-bin libopenmpi-dev
+$ sudo pip3 uninstall tensorflow
+$ wget -O tensorflow-1.11.0-cp35-cp35m-linux_armv7l.whl https://github.com/PINTO0309/Tensorflow-bin/raw/master/tensorflow-1.11.0-cp35-cp35m-linux_armv7l_jemalloc.whl
+$ sudo pip3 install tensorflow-1.11.0-cp35-cp35m-linux_armv7l.whl
 ```
+2-2.Install tensorflow 1.11.0 (Ubuntu16.04 x86_64)
+```bash
+$ sudo -H pip3 install pip --upgrade
+$ sudo -H pip3 install tensorflow==1.11.0 --upgrade
+```
+
 3.Install package and update udev rule
 ```bash
 $ sudo pip3 install pillow lxml jupyter matplotlib cython
