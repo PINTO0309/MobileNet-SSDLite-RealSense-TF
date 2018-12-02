@@ -157,7 +157,7 @@ $ sudo dpkg -i ~/libtbb-dev_2018U2_armhf.deb
 $ sudo ldconfig
 $ rm libtbb-dev_2018U2_armhf.deb
 ```
-8-1.Install OpenCV 3.4.3(Raspbian Stretch / with TBB, with DNN, with OpenGL)
+8.Install OpenCV 3.4.3(Raspbian Stretch / with TBB, with DNN, with OpenGL)
 ```bash
 $ cd ~
 $ wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.4.3.zip
@@ -187,14 +187,6 @@ $ cmake -D CMAKE_CXX_FLAGS="-DTBB_USE_GCC_BUILTINS=1 -D__TBB_64BIT_ATOMICS=0" \
 $ make -j1
 $ sudo make install
 $ sudo ldconfig
-```
-8-2.Install OpenCV 3.4.3(Ubuntu16.04 x86_64)
-```bash
-$ sudo -H pip3 install opencv-python==3.4.3.18
-$ nano ~/.bashrc
-export PYTHONPATH=/usr/local/lib/python3.5/dist-packages/cv2:$PYTHONPATH
-
-$ source ~/.bashrc
 ```
 9.Install Intel® RealSense™ SDK 2.0
 ```bash
