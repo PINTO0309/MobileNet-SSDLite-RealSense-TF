@@ -1,13 +1,10 @@
 # MobileNet-SSDLite-RealSense-TF
 RaspberryPi3(Raspbian Stretch) + MobileNetv2-SSDLite(Tensorflow/MobileNetv2SSDLite) + RealSense D435 + Tensorflow + without Neural Compute Stick(NCS)
 
-**=========================================**
-
-**Nov 25, 2018 Under refactoring**  
-**Please refer to here until refactoring is over.**  
-**https://github.com/PINTO0309/MobileNet-SSDLite-RealSense-TF/releases/tag/v2.0**  
-  
-**=========================================**
+## Change history
+<details><summary>Change history</summary><div>
+[Dec 02, 2018]　Corresponds to OpenCV3.4.3,Tensorflow v1.11.0, Protobuf 3.6.1, librealsense v2.16.5, D435 Firmware v5.10.6  
+</div></details>  
 
 ## Environment
 - RaspberryPi3 + Raspbian Stretch
