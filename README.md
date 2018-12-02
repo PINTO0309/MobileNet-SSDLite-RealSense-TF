@@ -208,12 +208,8 @@ $ cmake .. -DBUILD_EXAMPLES=true -DCMAKE_BUILD_TYPE=Release
 OR
 $ cmake .. -DBUILD_EXAMPLES=true
 
-$ make -j1
+$ make -j1　# When running on a resource rich PC, "make -j8"
 $ sudo make install
-```
-10.【Ubuntu16.04 Only】 Install Python Wrapper
-```bash
-$ sudo -H pip3 install pyrealsense2
 ```
 10.Install OpenCV Wrapper
 ```bash
