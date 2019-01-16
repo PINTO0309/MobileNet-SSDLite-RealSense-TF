@@ -55,7 +55,7 @@ MM FW Version = 255.255.255.255
 $ sudo nano /etc/dphys-swapfile
 CONF_SWAPSIZE=2048
 
-$ sudo /etc/init.d/dphys-swapfile restart swapon -s
+$ sudo /etc/init.d/dphys-swapfile restart;swapon -s
 ```
 2-1.Install tensorflow 1.11.0 (Raspbian Stretch)
 ```bash
@@ -268,7 +268,7 @@ $ rm ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
 $ sudo nano /etc/dphys-swapfile
 CONF_SWAPSIZE=100
 
-$ sudo /etc/init.d/dphys-swapfile restart swapon -s
+$ sudo /etc/init.d/dphys-swapfile restart;swapon -s
 ```
 14.Enable OpenGL Driver
 ```bash
